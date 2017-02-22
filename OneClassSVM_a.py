@@ -6,7 +6,7 @@ Created on Wed Feb 22 13:51:39 2017
 """
 #import dataset
 import quandl
-#ql = quandl.get("NASDAQOMX/OMXS30SHORTX2")
+ql = quandl.get("NASDAQOMX/OMXS30SHORTX2")
 
 #import rest library
 from sklearn.decomposition import PCA

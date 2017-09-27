@@ -1,7 +1,7 @@
 # DEEP-DREAM GOOGLE
 
-Shows the amibigious data points where the stock prices varied unxpected or ran out of prediction range
-Also shows the sudden change in the stockplot
+makes pictures trippy
+happy coding..
 
 Libraries used :
 SYS

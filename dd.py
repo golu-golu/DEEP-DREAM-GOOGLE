@@ -4,10 +4,7 @@ Created on Wed Feb 22 13:51:39 2017
 
 @author: anurag
 """
-
-'''Deep Dreaming in Keras.
-Run the script with:
-```
+'''
 python deep_dream.py path_to_your_base_image.jpg prefix_for_results
 ```
 e.g.:
@@ -15,6 +12,7 @@ e.g.:
 python deep_dream.py img/mypic.jpg results/dream
 ```
 '''
+# import all the dependencies
 from __future__ import print_function
 
 from keras.preprocessing.image import load_img, img_to_array
@@ -25,6 +23,7 @@ import argparse
 from keras.applications import inception_v3
 from keras import backend as K
 
+# make the cmdline parser
 parser = argparse.ArgumentParser(description='Deep Dreams with Keras.')
 parser.add_argument('base_image_path', metavar='base', type=str,
                     help='Path to the image to transform.')
@@ -49,7 +48,7 @@ settings = {
     },
 }
 
-
+# define helper functions
 def preprocess_image(image_path):
     # Util function to open, resize and format pictures
     # into appropriate tensors.
@@ -73,6 +72,8 @@ def deprocess_image(x):
     x = np.clip(x, 0, 255).astype('uint8')
     return x
 
+  
+# start computations 
 K.set_learning_phase(0)
 
 # Build the InceptionV3 network with our placeholder.
